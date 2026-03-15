@@ -5,7 +5,7 @@ export default function WorkPage() {
   const [darkMode, setDarkMode] = useState(true);
   const [tick, setTick] = useState(0);
   const [activeSection, setActiveSection] = useState('experience');
-  const [starField, setStarField] = useState([]);
+  const [starField, setStarField] = useState<{x: number; y: number; size: string; twinkleSpeed: number; floatSpeed: number; floatRange: number; charOffset: number; phaseOffset: number}[]>([]);
 
   useEffect(() => {
     const sizes = ['lg', 'md', 'sm'];
