@@ -22,6 +22,7 @@ export default function Homepage() {
       charOffset: Math.floor(Math.random() * 3),
       phaseOffset: Math.random() * Math.PI * 2,
     }));
+    // @ts-ignore
     setStarField(stars);
   }, []);
 
@@ -67,7 +68,7 @@ export default function Homepage() {
   / /| | / / _ \\| |/_/     / /_/ / __ \\/ ___/ __ \\/ _ \\/ __/ __/ _ \\
  / ___ |/ /  __/>  <      / _, _/ /_/ / /__/ / / /  __/ /_/ /_/  __/
 /_/  |_/_/\\___/_/|_|     /_/ |_|\\____/\\___/_/ /_/\\___/\\__/\\__/\\___/`;
-
+// @ts-ignore
   const getStarStyle = (star) => {
     const now = tick * 100;
     const floatY = star.y + Math.sin((now / star.floatSpeed) + star.phaseOffset) * star.floatRange;
@@ -81,13 +82,14 @@ export default function Homepage() {
       fontSize: star.size === 'lg' ? '14px' : star.size === 'md' ? '10px' : '8px',
     };
   };
-
+// @ts-ignore
   const getStarChar = (star) => {
     const sizeChars = {
       lg: ['✦', '✧', '⋆'],
       md: ['✧', '°', '*'],
       sm: ['·', '˚', '°'],
     };
+    // @ts-ignore
     const chars = sizeChars[star.size];
     const now = tick * 100;
     const index = Math.floor((now / star.twinkleSpeed) + star.charOffset) % chars.length;

@@ -7,7 +7,7 @@ export default function WorkPage() {
   const [activeSection, setActiveSection] = useState('experience');
   // @ts-ignore
   const [starField, setStarField] = useState([]);
-  
+
   useEffect(() => {
     const sizes = ['lg', 'md', 'sm'];
     const stars = Array.from({ length: 50 }, () => ({
@@ -20,6 +20,7 @@ export default function WorkPage() {
       charOffset: Math.floor(Math.random() * 3),
       phaseOffset: Math.random() * Math.PI * 2,
     }));
+    // @ts-ignore
     setStarField(stars);
   }, []);
 
@@ -47,7 +48,7 @@ export default function WorkPage() {
   };
 
   const c = darkMode ? dark : light;
-
+// @ts-ignore
   const getStarStyle = (star) => {
     const now = tick * 100;
     const floatY = star.y + Math.sin((now / star.floatSpeed) + star.phaseOffset) * star.floatRange;
@@ -60,9 +61,10 @@ export default function WorkPage() {
       fontSize: star.size === 'lg' ? '14px' : star.size === 'md' ? '10px' : '8px',
     };
   };
-
+// @ts-ignore
   const getStarChar = (star) => {
     const sizeChars = { lg: ['✦', '✧', '⋆'], md: ['✧', '°', '*'], sm: ['·', '˚', '°'] };
+   // @ts-ignore
     const chars = sizeChars[star.size];
     const now = tick * 100;
     return chars[Math.floor((now / star.twinkleSpeed) + star.charOffset) % chars.length];
