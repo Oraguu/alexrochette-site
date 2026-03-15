@@ -5,7 +5,9 @@ export default function Homepage() {
   const [darkMode, setDarkMode] = useState(true);
   const [currentTime, setCurrentTime] = useState(new Date());
   const [tick, setTick] = useState(0);
-  const [starField, setStarField] = useState<{x: number; y: number; size: string; twinkleSpeed: number; floatSpeed: number; floatRange: number; charOffset: number; phaseOffset: number}[]>([]);
+  // @ts-ignore
+  const [starField, setStarField] = useState([]);
+  
   
   // Generate stars only on client side
   useEffect(() => {
