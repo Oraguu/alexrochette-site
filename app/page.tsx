@@ -165,29 +165,23 @@ export default function Homepage() {
           </pre>
           
           <div className="text-xs inline-block" style={{ color: c.muted }}>
-  <pre>
+  <pre className="text-xs transition-colors duration-500 inline-block" style={{ color: c.muted }}>
 {`┌─────────────────────────────────────────────────────────────────┐
 │                                                                 │
 │  Industrial Engineering & Business @ Northeastern               │
 │  Building things in robotics and automation.                    │
-│                                                                 │`}
-  </pre>
-  <div className="flex gap-3 pl-3">
-    <a href="/work" className="hover:opacity-70 transition-colors" style={{ color: c.accent }}>
-      <pre>{`┌─────────────────┐
-│  → see my work  │
-└─────────────────┘`}</pre>
-    </a>
-    <a href="mailto:rochette.a@northeastern.edu" className="hover:opacity-70 transition-colors" style={{ color: c.accent }}>
-      <pre>{`┌─────────────────┐
-│  → get in touch │
-└─────────────────┘`}</pre>
-    </a>
-  </div>
-  <pre>
-{`│                                                                 │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘`}
-  </pre>
+</pre>
+
+<div className="flex gap-4 mt-4 justify-center">
+  <a href="/work" className="text-xs hover:opacity-70 transition-colors" style={{ color: c.accent }}>
+    [→ see my work]
+  </a>
+  <a href="mailto:rochette.a@northeastern.edu" className="text-xs hover:opacity-70 transition-colors" style={{ color: c.accent }}>
+    [→ get in touch]
+  </a>
+</div>
 </div>
           
         </div>
