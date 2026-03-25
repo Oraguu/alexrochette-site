@@ -32,7 +32,7 @@ export default function Homepage() {
   useEffect(() => {
     if (tick % 10 === 0 && starField.length > 0) {
       // @ts-ignore
-      setStarField(stars => stars.map(star => {
+      setStarField((stars: any[]) => stars.map((star: any) => {
         const now = tick * 100;
         const fadeProgress = ((now + star.fadeDelay) % star.fadeDuration) / star.fadeDuration;
         const fadeOpacity = Math.sin(fadeProgress * Math.PI);
